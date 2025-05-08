@@ -1,0 +1,24 @@
+@RestaurantsAPI_HostAddress = https://localhost:7195
+
+GET {{RestaurantsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{RestaurantsAPI_HostAddress}}/api/restaurants
+
+###
+
+
+@id=5
+GET {{RestaurantsAPI_HostAddress}}/api/restaurants/GetRestaurantById/{{id}}
+
+###
+
+GET {{RestaurantsAPI_HostAddress}}/api/restaurants/GetRestaurantById/{{id}}
+
+###
+
+GET {{RestaurantsAPI_HostAddress}}/api/restaurants
+
+###
