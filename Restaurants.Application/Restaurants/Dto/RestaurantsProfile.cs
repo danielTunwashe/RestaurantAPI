@@ -1,5 +1,7 @@
-﻿
-using AutoMapper;
+﻿using AutoMapper;
+using Restaurants.Application.Dishes.Dto;
+using Restaurants.Application.Restaurants.Commands.CreateRestaurant;
+using Restaurants.Application.Restaurants.Commands.UpdateRestaurant;
 using Restaurants.Domain.Entities;
 
 namespace Restaurants.Application.Restaurants.Dto
@@ -8,8 +10,12 @@ namespace Restaurants.Application.Restaurants.Dto
     {
         public RestaurantsProfile()
         {
+            CreateMap<Dish, DishDto>();
+
+            CreateMap<UpdateRestaurantCommand, Restaurant>();
+
             //Order Reversed fror Input
-            CreateMap<CreateRestaurantDto, Restaurant>()
+            CreateMap<CreateRestaurantCommand, Restaurant>()
                 .ForMember(d => d.Address, opt => opt.MapFrom(
                     src => new Address
                     {

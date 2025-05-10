@@ -15,7 +15,7 @@ namespace Restaurants.Application.Restaurants.Dto
         public string? City { get; set; }
         public string? Street { get; set; }
         public string? PostalCode { get; set; }
-        public List<DishDto?> Dishes { get; set; } = [];
+        public List<DishDto> Dishes { get; set; } = [];
 
 
         //public static RestaurantDto? FromEntity(Restaurant? restaurant)
